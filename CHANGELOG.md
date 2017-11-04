@@ -5,7 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
-
+### Added
+- Support for [Wildcard event handlers](https://github.com/asyncly/EventEmitter2).
 ## [1.0.12] - 2017-04-14
 ### Added
 - Support for [Messenger Profile API](https://developers.facebook.com/docs/messenger-platform/messenger-profile).

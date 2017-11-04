@@ -3,6 +3,7 @@
 </p>
 
 BootBot is a simple but powerful JavaScript Framework to build Facebook Messenger's Chat bots.
+**Note:** This is a fork from the orgional repo to support wildcard event handlers.
 
 | [Features][] | [Usage][] | [Video Example][] | [Getting Started][] | [Documentation][] | [Examples][] | [Credits][] | [License][] |
 |---|---|---|---|---|---|---|---|
@@ -12,6 +13,7 @@ BootBot is a simple but powerful JavaScript Framework to build Facebook Messenge
 
 ## Features
 
+- Support for **wildcard** events using [EventEmitter2](https://github.com/asyncly/EventEmitter2)
 - Helper methods to **send** any type of message supported by Facebook.
 - **Subscribe** to a particular type of message, or to certain **keywords** sent by the user.
 - Start **conversations**, **ask** questions and save important information in the **context** of the conversation.
@@ -23,7 +25,7 @@ BootBot is a simple but powerful JavaScript Framework to build Facebook Messenge
 ## Usage
 
 ```
-$ npm install bootbot --save
+$ npm install git+https://github.com/ssteynfaardt/bootbot.git --save
 ```
 
 ```javascript
@@ -39,6 +41,13 @@ const bot = new BootBot({
 bot.on('message', (payload, chat) => {
   const text = payload.message.text;
   chat.say(`Echo: ${text}`);
+});
+
+//Support for wildcard events
+bot.on('postback:YOUR_PAYLOAD_NAME.*', (payload, chat) => {
+  const event = this.event; 
+  const text = payload.message.text;
+  chat.say(`Echo: ${event} - ${text}`);
 });
 
 bot.start();
