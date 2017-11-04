@@ -3,6 +3,7 @@
 </p>
 
 BootBot is a simple but powerful JavaScript Framework to build Facebook Messenger's Chat bots.
+
 **Note:** This is a fork from the orgional repo to support wildcard event handlers.
 
 | [Features][] | [Usage][] | [Video Example][] | [Getting Started][] | [Documentation][] | [Examples][] | [Credits][] | [License][] |
